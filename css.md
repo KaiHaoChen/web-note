@@ -214,3 +214,36 @@
             color: chartreuse;
         }
 ```
+### 伪元素
+- 表示页面中一些特殊的并不真是存在的元素
+- 伪元素使用：：
+
+```css
+::first-letter 表示第一个字母
+::first-line 表示第一行
+::selection 表示选中内容
+::before 元素的开始
+::after 元素的最后
+    - before和after结合content属性使用
+
+        p::first-letter {
+            color: red;
+        }
+
+        p::first-line {
+            color: yellow;
+        }
+
+        p::selection {
+            color: aqua;
+        }
+
+        div::before {
+            content: 'abc';
+        }
+
+        div::after {
+            content: 'efg';
+        }
+
+```
