@@ -159,7 +159,7 @@
 - 伪类一般情况下使用：开头
 ```css
 :first-child 第一个子元素
-:last-chile 最后一个子元素
+:last-child 最后一个子元素
 :nth-child() 选中第n个子元素
     n 第n个元素
     2n 或 even 表示选中偶数位的元素
@@ -246,4 +246,61 @@
             content: 'efg';
         }
 
+```
+
+## 餐厅练习（选择器练习）
+https://flukeout.github.io/
+```css
+1.plate
+2.bento
+3.#fancy
+4.plate > apple
+5.#fancy > pickle
+6.apple.small
+7.orange.small
+8.bento > orange.small
+9.plate,bento
+10.plate,apple,bento,orange
+11.plate > pickle,plate > apple ,plate > orange
+12.plate + apple
+13.bento ~ pickle
+14.plate > apple
+15.plate > orange:first-child
+16.plate > apple , plate > pickle
+17.apple,pickle
+18.plate:nth-child(3)
+19.bento:first-of-type
+20.apple:first-of-type
+21.plate:nth-child(even)
+22.plate:nth-child(3),plate:nth-child(5)
+23.plate:nth-child(2) > apple
+24.orange:last-of-type,apple:last-of-type
+25.bento:empty
+26.apple:not(.small)
+27.[for]
+28.plate[for]
+29.bento[for=Vitaly]
+30.[for^=Sa]
+31.[for$=ato]
+32.[for*=obb]
+```
+
+## 继承
+- 元素设置的样式同时也会应用到他的后代元素上
+- 继承是发生在祖先后代之间
+- 继承的设计是为了方便我们的开发
+- 背景相关，布局相关的这些样式不会被继承
+  
+## 选择器的权重
+- 优先级越高，越优先显示
+- 如果优先级计算相同，则优先使用靠下的样式
+- 可以在某一个样式后边添加！important,此时该样式会获取到最高优先级，慎用！！
+
+```
+- 内联样式 1000
+- id选择器 100
+- 类和伪类选择器 10
+- 元素选择器    1
+- 通配选择器 0
+- 继承的样式 没有优先级
 ```
