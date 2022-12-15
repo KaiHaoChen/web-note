@@ -361,11 +361,34 @@ RGBA
       - 边框（border）
       - 内边距（padding）
       - 外边距（margin）
+
+
+### 盒子模型-边框
+- 边框的宽度 border-width
 ```
-- 内容区
-    a.内容去的大小有width和height两个属性设置
-- 边框(至少设置三个样式)
-    a.边框的宽度 border-width
-    b.边框的颜色 border-color
-    c.边框的样式 border-style
+- 默认值 一般3个像素
+- 指定四个方向的边框宽度 
+    a.上 右 下 左
+    b.上 左右 下
+    c.上下 左右
+    d.上下左右 
+- 也可以border-xxx-width xxx可以是top right left bottom
+```
+- 边框的颜色 border-color
+```
+- 用来指定四个边的边框颜色，规则同border-width一样
+- 可以省略不写，自动使用color的值 
+```
+- 边框的样式 border-style
+```
+默认值:none
+
+solid 实线
+dotted 点状虚线
+dashed 虚线
+double 双线
+```
+- border简写属性
+```
+没有顺序要求，空格隔开就行
 ```
