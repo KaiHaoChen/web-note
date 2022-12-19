@@ -399,5 +399,45 @@ double 双线
 - 背景颜色会延申到内边距上
 - padding属性简写
 ```
-规则和border-width 以
+规则和border-width 一样
 ```
+### 盒子模型-外边距（margin）
+- 外边距不会影响盒子可见框的大小
+- 外边距会影响盒子位置
+```css
+margin-top：设置正值，元素会向下移动
+margin-right：默认情况设置margin-right不会产生任何效果
+margin-bottom：设置正值，下边的元素会向下移动
+margin-left：设置正值，元素会向右移动
+
+margin简写：上 右 下 左
+```
+
+### 盒子水平布局
+由以下几个属性决定
+- margin-left
+- border-left
+- padding-left
+- width
+- padding-right
+- border-right
+- margin-right
+
+以上元素相加 = 其父元素内容区的宽度（必须满足）
+
+```css
+- 如果等式不成立，则称为过度约束，则等式会自动调整
+
+调整情况：
+    - 如果七个值中没有auto的情况，则浏览器会自动调整margin-right以等式满足
+    - 这七个值中有三个值设置为auto
+      width
+      margin-left
+      margin-right
+      - 如果某个值为auto,则会自动调整为auto的那个值以使等式成立
+
+      - 如果宽度和外边距都为atuo，优先宽度
+      - 如果两个外边距都为auto,则居中;（margin:0 auto;）
+```
+
+### 盒子垂直布局p49
