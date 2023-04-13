@@ -549,3 +549,72 @@ border-bottom-right-radius
 
 #### 开启BFC
 - 常用方式：为元素设置overflow hidden 开启BFC
+
+### clear
+- 清除浮动元素对当前元素所产生的影响
+```
+可选值
+    left：清除左侧
+    right：清除右侧
+    both：清除影响大的
+原理：设置清除浮动以后，浏览器会自动为元素添加一个上外边距以使其不受浮动影响
+```
+
+## clearfix解决  高度塌陷 外边距重叠
+```
+.box1 ::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.box1 ::before {
+    content:'';
+    display:table;
+}
+
+<!-- clearfix解决高度塌陷和外边距重叠问题 -->
+.clearfix::before,
+.clearfix::after {
+    content:'';
+    display:table;
+    clear:both;
+}
+```
+
+# 定位position
+- 使用position来设置定位
+```
+可选值：
+    static 默认值
+    relative: 相对定位
+    absolute: 绝对定位
+    fixed: 固定定位
+    sticky 粘滞定位
+```
+## 相对定位
+- position:relative
+- 元素不设置偏移量，元素不会发生变化
+- 偏移量:left right top bottom
+- 相对于元素在文档流中的位置定位
+- 相对定位会提升元素的层级
+- 相对定位不会脱离文档流 
+
+## 绝对定位
+- position: absolute
+- 开启绝对定位以后元素会脱离文档流
+- 开启绝对定位会改变元素的性质，行内变成块，块的宽高被内容撑开
+- 绝对定位的元素是相对于其包含块进行定位
+```
+包含块：
+    - 正常情况下：
+        包含块就是离当前元素最近的祖先块元素
+    - 绝对定位的包含块：
+        包含块就是离他最近开启定位的祖先元素
+        如果祖先元素都没有开启定位，则相对于根元素进行定位
+```
+## 固定定位
+- position:fixed
+- 固定定位大部分特点和绝对定位一样
+- 固定定位永远是参照于浏览器的视口进行定位
+- 固定定位的元素不会随网页的滚动条滚动
