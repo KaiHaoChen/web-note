@@ -647,5 +647,66 @@ serif 衬线
 sans-serif 非衬线字体
 monospace 等宽字体
 ```
+- font 设置字体的所有属性
+```
+语法：font: 字体大小/行高 字体族
+```
+## 图标字体
+- @font-face
+```
+fontawesome 使用步骤
+1.下载
+2.解压
+3.将css和webfonts移动到项目中
+4.将all.css引入
+5.使用图标字体
+    直接使用类名来使用图标字体
+    class = "fas fa-bell"
+    class = "fab fa-accessible-icon"
+```
+- 通过伪元素实现前置图标后置图标
 
-p76
+## 行高
+- 行高指的是文字占有的实际高度
+- line-height来设置行高
+- 将行高设置和高度一样，使单行文字在元素居中
+
+## 文本对齐
+- text-align 文本的水平对齐
+```
+可选值：
+    left 左侧对齐
+    right 右对齐
+    center 居中对齐
+    justify 两端对齐
+```
+- vertical-aline 设置元素垂直对齐
+```
+可选值：
+    baseline 默认值 基线对齐
+    top 顶部对齐
+    bottom 底部对齐
+    middle 居中对齐
+```
+- text-decoration 设置文本修饰
+```
+可选值：
+    none 什么都没有
+    underline 下划线
+    line-throught 删除线
+    overline 上划线
+```
+- white-space 设置网页如何处理空白
+```
+可选值：
+    normal 默认值
+    nowrap 不换行
+    pre 保留空白
+```
+- 省略号
+```
+white-space: nowrap;
+overflow: hidden;
+text-overflow:ellipsis;
+```
+p83
