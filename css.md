@@ -709,4 +709,49 @@ white-space: nowrap;
 overflow: hidden;
 text-overflow:ellipsis;
 ```
-p83
+# 背景
+- background-color 设置背景颜色
+- background-image 设置背景图片
+```
+- 背景图片小于元素，平铺
+- 背景图片大于元素 裁剪
+```
+- background-repeat 设置背景重复方式
+```
+repeat 默认值 沿着x y 重复
+no-repeat 不重复
+repeat-x  x轴重复
+repeat-y  y轴重复
+```
+- background-position 设置背景图片的位置
+```
+通过 top left right bottom center 设置背景图片位置
+```
+- background-clip 设置背景的范围
+```
+border-box 
+padding-box 背景不会出现在边框
+content-box 背景只会出现在内容区域
+```
+- background-size 背景图片大小
+```
+第一个表示宽度
+第二个表示高度
+cover 图片比例不变 铺满
+contain 图片比例不变 将图片在元素中完整显示
+```
+
+## 渐变
+### 线性渐变
+- linear-gradient
+```
+linear-gradient(to right,red,yellow)
+渐变方向：
+    to right
+    to top
+    to bottom
+    to left
+    xxxdeg deg表示度数
+```
+
+p93
