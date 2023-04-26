@@ -128,3 +128,28 @@
 ```
     <audio src="123" controls autoplay></audio>
 ```
+
+# 表格
+- table 表格
+- tr 行
+- td 单元格
+
+## 合并单元格
+- colspan 横向合并单元格
+- rowspan 纵向合并单元格
+
+## 长表格
+- thead 头部
+- tbody 主体
+- tfoot 底部
+- th 头部单元格
+
+## 样式
+- border-spacing 指定边框之间的距离
+- border-collapse: collapse 设置边框合并
+
+## 注意
+```
+如果表格灭有使用tbody而是直接使用tr
+浏览器会自动创建tbody，将tr放在tbody下面
+```

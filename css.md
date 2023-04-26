@@ -754,4 +754,39 @@ linear-gradient(to right,red,yellow)
     xxxdeg deg表示度数
 ```
 
-p93
+### 径向渐变
+- radial-gradient();
+```
+默认情况下径向渐变的形状根据元素来计算
+    正方形 --> 圆形
+    长方形 --> 椭圆形
+    也可以手动指定径向渐变的大小
+background-image:radial-gradient(100px,100px,red,yellow)
+```
+
+## 动画
+
+### 过渡
+- transition 
+```
+transition-property 指定过渡的属性
+    多个属性使用，隔开
+    所有属性则使用all
+    大部分属性都支持过渡效果
+
+transition-duration 指定过渡效果的持续时间
+
+transition-timing-function 过渡的时序函数
+    ease 默认值 慢快慢
+    linear 匀速
+    ease-in 加速
+    ease-out 减速
+    cubic-bezier 贝塞尔曲线
+    steps 分布执行过渡效果
+
+transition-delay 过渡效果的延迟
+
+transition:all 2s;
+```
+
+p117
