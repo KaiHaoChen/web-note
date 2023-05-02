@@ -789,4 +789,64 @@ transition-delay 过渡效果的延迟
 transition:all 2s;
 ```
 
-p117
+### 动画
+- 动画和过渡类似
+- 设置动画必须先设置关键帧@keyframes
+
+```
+- animation-name：关键帧名字
+- animation-duration: 执行时间
+- animation-delay：延迟时间 
+- animation-iteration-count：动画执行次数 
+    可选值：infinite 无限执行
+- animation-direction：动画运行方向
+    可选值： normal from到to
+            reverse to到from
+            alternate 重复执行来回 from to from ...
+- animation-play-state：动画执行状态
+    可选值：paused动画暂停
+
+@keyframes test{
+    from {
+        margin-left:0;
+    }
+
+    to {
+        margin-left:700
+    }
+}
+
+```
+
+### 变形
+- transform 用来设置元素的变形效果
+```
+- 平移：
+    translateX(): 沿x轴方向平移
+    translateY(): 沿y轴方向平移
+    translateZ(): 沿z轴方向平移
+
+水平居中：
+    left:50%;
+    transform:translateX(-50%); 
+使用z轴时必须设置视距 perspective;
+```
+
+### 旋转
+```
+rotateX()
+rotateY()
+rotateZ()
+
+练习时钟 魔方
+transform-style:preserve-3d：设置3d变形效果
+```
+
+### 缩放
+```
+scaleX() 水平方向缩放
+scaleY() 垂直方向缩放
+transform-orgin: 变形原点
+```
+
+p126
