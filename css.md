@@ -709,7 +709,7 @@ white-space: nowrap;
 overflow: hidden;
 text-overflow:ellipsis;
 ```
-# 背景
+# 背景和动画
 - background-color 设置背景颜色
 - background-image 设置背景图片
 ```
@@ -849,4 +849,46 @@ scaleY() 垂直方向缩放
 transform-orgin: 变形原点
 ```
 
-p126
+# less
+
+## 语法
+- 定义：@变量名
+- 直接使用：@变量名
+- 作为类名使用：@{变量名}
+- 引用属性：$属性名
+- $表示外侧父元素
+```
+.box {
+    &:hover {
+
+    }
+}
+```
+- extend() 
+```
+.p1 {
+
+}
+.p2:extend(.p1){
+
+}
+.p3 {
+    // 直接引用p1样式
+    .p1();
+}
+```
+- 混合函数 设置变量
+```
+.test(@w) {
+    width:@w
+}
+
+div {
+    .test(200px);
+}
+
+```
+- 所有数值可以直接进行运算
+- import引入其他less进行模块化
+
+p131
