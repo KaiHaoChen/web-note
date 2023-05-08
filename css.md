@@ -891,4 +891,89 @@ div {
 - 所有数值可以直接进行运算
 - import引入其他less进行模块化
 
-p131
+# 弹性盒
+- flex 让元素跟随页面的大小改变而改变
+- 弹性容器
+```
+display:flex 块级弹性容器
+display:inline-flex 行内的弹性荣幸
+
+```
+- 弹性元素
+```
+弹性容器的子元素是弹性元素
+```
+
+## 属性
+- flex-direction 排列方式
+
+```
+- row 默认值 水平排列 从左向右
+- row-reverse 水平反向
+- column 纵向排列 从上往下
+- coulumn-reverse 纵向反向
+
+主轴
+    弹性元素的排列方向称为主轴
+侧轴
+    与主轴垂直方向的称为侧轴
+```
+- flex-grow 指定弹性元素的伸展系数
+```
+- 当父元素还有空间，子元素如何伸展
+- 父元素剩余空间会按照比例分配
+```
+- flex-shrink 指定弹性元素的收缩系数
+```
+- 当父元素的空间不足容纳所有的子元素
+```
+- flex-wrap 设置弹性元素是否自动换行
+```
+- nowrap 默认值
+- wrap 自动换行
+- wrap-reverse 反方向换行
+```
+- flex-flow wrap和direction简写属性
+
+- justify-content 主轴空白排列方式
+```
+- flex-start 主轴起边排列(左对齐)
+- flex-end 主轴终边排列（右对齐）
+- center 元素居中排列
+- space-around 空白分布元素两侧
+- space-evenly 空白分布元素单侧
+```
+- align-items 元素在侧轴上如何对齐
+```
+- stretch 元素的长度设置相同的值
+- flex-start 元素不会拉伸，沿着侧轴起边对齐（上对齐）
+- flex-end 沿着侧轴终边对齐（下对齐）
+- center 居中对齐
+```
+- align-content 侧轴空白空间分布
+- align-self 弹性元素的align-items
+- flex-basis 弹性元素的基础长度
+```
+主轴是横向 该值为宽度
+主轴是纵向 该值为高度
+```
+- order 弹性元素的排列顺序
+
+# 响应式布局
+## 媒体查询
+- 语法 @media 查询规则
+
+```
+媒体类型：
+    all 所有设备
+    print 打印设备
+    screen 屏幕的设备
+    speech 屏幕阅读器
+@media all {}
+```
+
+## 媒体特性
+- width 视口的宽度
+- height 视口的高度
+- min-width 视口的最小宽度（大于指定宽度生效）
+- max-width 视口的最大宽度（小于指定宽度生效）
