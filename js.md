@@ -215,4 +215,121 @@ const fn = (a=10) => {}
 ### 严格模式
 - "use strict"
 
-p71
+## 面向对象
+```
+class Dog {
+
+}
+const d1 = new Dog()
+```
+### 属性
+- 使用static声明的属性，是静态属性,只能通过类去访问
+```
+class Person {
+    age
+    name
+}
+```
+### 方法
+```
+class Person {
+    name = "ckh"
+
+    sayHello(){
+
+    }
+}
+```
+### 构造方法
+- constructor
+- 构造函数会在调用类创建对象时执行
+```
+class Person {
+    name
+    constructor(name){
+        this.name = name;
+    }
+}
+```
+### 封装
+- 通过#将属性设置为私有
+- 通过get set方法来操作属性
+- 封装保证数据的安全
+```
+class Person {
+    #name
+    constructor(name){
+        this.#name = name;
+    }
+
+    getName(){
+        return this.#name;
+    }
+
+    setName(name){
+        this.#name = name;
+    }
+}
+```
+
+### 多态
+- 灵活性
+```
+function sayHello(obj){
+
+}
+sayHello(new Dog())
+```
+
+### 继承
+- extend
+- super 父类
+- ocp开闭原则
+```
+修改关闭，扩展开放
+```
+```
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    sayHello(){
+
+    }
+}
+
+class Dog extend Animal {
+
+}
+```
+
+### 对象结构
+- 对象自身
+- 原型对象_proto_  
+```
+1.在类中通过xxx(){}方式添加的方法
+2.主动向原型中添加属性和方法
+```
+### 原型
+- 访问原型对象
+```
+对象.__proto__ 
+Object.getPrototypeOf(对象)
+```
+- 原型对象中的数据
+```
+1.对象中的属性和方法
+2.constructor
+
+注意：原型对象也有原型
+p对象 - 原型 - 原型 - null
+obj对象 - 原型 - null
+```
+### 原型的作用
+- 同类型的对象原型对象都是同一个
+- 避免重复创建方法
+- 继承：子类的原型就是父类
+
+
+p83
