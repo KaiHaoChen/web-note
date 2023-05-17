@@ -311,7 +311,7 @@ class Dog extend Animal {
 1.在类中通过xxx(){}方式添加的方法
 2.主动向原型中添加属性和方法
 ```
-### 原型
+### 原型 ⭐
 - 访问原型对象
 ```
 对象.__proto__ 
@@ -331,5 +331,37 @@ obj对象 - 原型 - null
 - 避免重复创建方法
 - 继承：子类的原型就是父类
 
+### 修改原型
+- 注意：不能通过类的实例去修改原型
+- 通过类的prototype属性
 
-p83
+### instanceof和hasOwnProperty
+- instanceof检查的时对象的原型链上是否有该类的实例
+- hasOwnProperty用来检查一个对象是否有该属性
+
+### 旧类
+```
+var Animal = (function(){
+    function Animal(){
+
+    }
+    return Animal
+})()
+
+var Cat = (function(){
+    function Cat(){
+
+    }
+
+    Cat.prototype = new Animal()
+    return Cat
+})()
+
+```
+
+### new
+- 创建一个普通js对象
+- 将构造函数的prototype属性设置为新对象的原型
+- 使用实参来执行构造函数，并且将新对象设置为函数中的this
+
+p88
