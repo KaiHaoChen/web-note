@@ -594,3 +594,64 @@ $ 结尾
 - split() 根据正则表达式拆分
 - search() 搜索正则表达式第一次出现
 - replace() 根据正则表达式替换内容
+
+## DOM
+### 文档节点
+- document原型链
+```
+HTMLDocument -> Document -> Node -> EventTarget
+```
+- 部分属性
+```
+document.documentElement 根元素
+document.head head元素
+document.title title元素
+document.body body元素
+document.links 页面所有超链接 
+```
+### 元素节点
+#### 获取元素节点
+```
+- document.getElementById() 通过id获取元素节点对象
+- document.getElementsByClassName() 根据元素的class属性值获取元素
+- document.getElementsByTagName() 根据标签名获取元素
+- document.getElementsByName() 根据name属性获取（表单项）
+- document.querySelectorAll() 根据选择器查询元素
+  ！！不会实时更新
+- document.querySelector 根据选择器返回第一个元素 
+``` 
+#### 元素节点属性方法
+```
+- element.childNodes 获取当前元素的子节点
+- element.children 获取当前元素的子元素
+- element.firstElementChild 获取当前元素第一个子元素
+- element.lastElementChild 获取当前元素最后一个子元素 
+- element.nextElementSibling 获取当前元素下一个兄弟元素
+- element.previousElementSibling 获取当前元素上一个兄弟元素
+- element.parentNode 获取当前元素的父节点
+
+```
+
+### 文本节点
+```
+修改文本三个属性
+element.textContent 获取或修改元素中的文本
+    - 不考虑css样式
+element.innerText
+    - 考虑css样式
+element.innerHTML 获取或修改元素中的html代码
+    - ！！！xss注入风险
+```
+
+### 属性节点
+```
+方式一：
+    读取：元素.属性名 （class需要className读取）
+    修改：元素.属性名 = 属性值
+方式二：
+    读取：元素.getAttribute(属性名)
+    修改：元素.setAttribute(属性名，属性值)
+    删除：元素.removeAttribute(属性值)
+```
+
+p140
