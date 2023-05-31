@@ -630,6 +630,22 @@ document.links 页面所有超链接
 - element.previousElementSibling 获取当前元素上一个兄弟元素
 - element.parentNode 获取当前元素的父节点
 
+// 动态添加元素
+const li = doucument.createElement("li")
+li.textContent = "xx"
+list.appendChild(li)
+
+element.insertAdjacentElement()
+// beforeend afterbegin beforebegin（元素前面） afterend(元素后面)
+
+element.insertAdjacentHTML()
+
+element.replaceWitch() 替换元素
+
+element.remove() 删除元素
+
+element.cloneNode() 复制节点
+
 ```
 
 ### 文本节点
@@ -654,4 +670,45 @@ element.innerHTML 获取或修改元素中的html代码
     删除：元素.removeAttribute(属性值)
 ```
 
-p140
+### 事件
+- 在元素属性中设置
+- 通过元素的指定属性设置回调函数来绑定事件(一个事件只能绑定一个函数)
+- 通过元素addEventListener()绑定事件
+```
+<button click=""></button>
+
+btn.addEventListtener("click",function(){
+
+})
+```
+#### 事件对象
+##### event
+```
+- event.target 表示触发事件的对象
+```
+##### 事件的冒泡
+- 事件的冒泡就是指事件的向上传递
+- 当元素的某个事件被触发后，其祖先元素的相同事件也会触发
+- event.stopPropagation() 取消事件的冒泡
+- 事件冒泡和样式无关，与结构相关
+
+### 操作样式
+#### 修改样式
+- 元素.style.样式名 = 样式值
+- 如果样式名有 - ，则使用驼峰
+```
+element.style.width = "90px";
+```
+
+#### 读取样式
+- getComputedStyle() 返回生效的样式
+
+#### class
+```
+element.classList.add()
+element.classList.remove()
+element.classList.toggle()
+element.class.replace() 
+```
+
+p161
