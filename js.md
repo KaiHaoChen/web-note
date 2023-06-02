@@ -711,4 +711,37 @@ element.classList.toggle()
 element.class.replace() 
 ```
 
-p161
+## BOM
+### Window
+### Navigator
+### Location
+- 浏览器地址栏信息
+```
+location.href 浏览器完整地址
+location.reload() 刷新界面
+```
+### History
+- back 后退一页
+- forward 前进一页
+- go 正数前进 负数后退
+### Screen 
+
+## 定时器
+- 本质是在指定时间后将函数添加到消息队列中
+- setTimeout() 设置定时器
+```
+参数：
+    1.回调函数
+    2.间隔时间（毫秒）
+```
+- clearTimeout() 关闭定时器
+- setInterval() 每间隔一段时间将函数添加到消息队列
+
+```
+参数
+    1.回调函数
+    2.间隔时间（毫秒）
+关闭定时器
+    clearInterval()
+缺点：如果函数执行的速度比较慢，无法确保每次执行的间隔
+```
